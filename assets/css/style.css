@@ -1,4 +1,213 @@
 
+
+:root{
+    
+    --tema1__cor: #fff;
+    --tema1__branco: rgb(255, 255, 255);
+    --tema1__cinza-claro: #cbc7c7;
+    --tema1__preto: rgb(54, 54, 54);
+    --tema1__cinza-escuro: #a3a3a3;
+    --tema1__cinza: rgb(185, 184, 184);
+    
+    --tema2__cor: #000;
+    --tema2__preto: #0c0c0c;
+    --tema2__cinza-escuro: #2d2d2d;
+    --tema2__branco: #fff;
+    --tema2__cinza-muito-escuro: #454545;
+    --tema2__cinza-claro: rgb(121, 121, 121);
+    
+    --tema3__cor: rgb(240, 47, 243);
+    --tema3__rosa: #fad2fe;
+    --tema3__rosa-escuro: #fb83f19e;
+    --tema3__roxo: rgb(174, 24, 194);
+    --tema3__rosa-claro: #fbb5f1;
+
+    --tema4__cor: rgb(251, 126, 1);
+    --tema4__cinza: #817f7f;
+    --tema4__preto: #0a0a0a;
+    --tema4__laranja: rgb(252, 147, 60);
+    --tema4__branco: #ebe4e4;
+    --tema4__cinza-escuro: rgb(65, 63, 63); 
+
+    --body__background: var(--tema1__cinza);
+    --calc__background: var(--tema1__cinza-claro);
+    --calc__texto: var(--tema1__preto);
+    --calc__numbers: var(--tema1__branco);
+    --calc__funcoes: var(--tema1__cinza-escuro);
+
+}
+
+.tema__branco{
+    --body__background: var(--tema1__cinza);
+    --calc__background: var(--tema1__cinza-claro);
+    --calc__texto: var(--tema1__preto);
+    --calc__numbers: var(--tema1__branco);
+    --calc__funcoes: var(--tema1__cinza-escuro);
+}
+
+.tema__preto{
+    --body__background: var(--tema2__cinza-claro);
+    --calc__background: var(--tema2__cinza-escuro);
+    --calc__texto: var(--tema2__branco);
+    --calc__numbers: var(--tema2__preto);
+    --calc__funcoes: var(--tema2__cinza-muito-escuro);
+}
+
+.tema__rosa{
+    --body__background: var(--tema3__rosa);
+    --calc__background: var(--tema3__rosa-claro);
+    --calc__texto: var(--tema3__roxo);
+    --calc__numbers: var(--tema3__rosa-escuro);
+    --calc__funcoes: var(--tema3__rosa-claro);
+}
+
+.tema__laranja{
+    --body__background: var(--tema4__cinza);
+    --calc__background: var(--tema4__preto);
+    --calc__texto: var(--tema4__branco);
+    --calc__numbers: var(--tema4__laranja);
+    --calc__funcoes: var(--tema4__cinza-escuro);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--body__background);
+}
+
+button{
+    cursor: pointer;
+}
+
+.text__tema{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 50vw;
+    margin: 50px auto 0px auto;
+    padding-bottom: 5px ;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--calc__texto);
+    position: relative;
+}
+
+.calculadora{
+    color: var(--calc__texto);
+    background: var(--calc__background);
+    width: 370px;
+    height: 600px;
+    margin: 0px auto 0px auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px var(--calc__texto);
+}
+.botao__tema{
+    width: 25px;
+    height: 25px;
+    border-color: var(--calc__texto);
+    color: var(--calc__texto);
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px var(--body__background);
+}
+
+.botao__tema--tema1{
+    background-color: var(--tema1__cor);
+}
+.botao__tema--tema2{
+    background-color: var(--tema2__cor);
+}
+.botao__tema--tema3{
+    background-color: var(--tema3__cor);
+}
+.botao__tema--tema4{
+    background-color: var(--tema4__cor);
+}
+
+.botao__numeros{
+    font-size: 2em;
+    color: var(--calc__texto);
+    background-color: var(--calc__numbers);
+    border-width:1px;
+    border-color: var(--calc__texto);
+    font-weight:bold;
+    border-top-left-radius:18px;
+    border-top-right-radius:18px;
+    border-bottom-left-radius:18px;
+    border-bottom-right-radius:18px;
+    box-shadow: 3px 4px 0px 0px var(--calc__texto);
+    text-shadow: 0px 1px 0px var(--calc__texto);
+    transition: 0.4s all;
+}
+
+.botao__funcoes:hover , .botao__numeros:hover, .botao__funcoes--igual:hover{
+    opacity: 0.5;
+}
+.botao__funcoes, .botao__funcoes--igual{
+    background-color: var(--calc__funcoes);
+    color: var(--calc__texto);
+    border-color: var(--body__background);
+    font-size: 1.2em;
+    font-weight:bold;
+    border-top-left-radius:18px;
+    border-top-right-radius:18px;
+    border-bottom-left-radius:18px;
+    border-bottom-right-radius:18px;
+    box-shadow: 3px 4px 0px 0px var(--body__background);
+    text-shadow: 0px 1px 0px var(--body__background);
+    transition: 0.4s all;
+}
+
+.botao__funcoes--igual{
+    background-color: var(--calc__texto);
+    color: var(--body__background);
+}
+
+.title{
+    font-size: 1.7em;
+    text-shadow: 3px 3px 3px var(--body__background);
+    color: var(--calc__texto);
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+.visor{
+    width: 90%;
+    height: 15vh;
+    background-color: var(--calc__numbers);
+    margin: 0px auto;
+    border-radius: 13px;
+}
+
+.botoes{
+    width: 90%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px;
+    margin: 8px auto;
+    row-gap: 8px;
+    column-gap: 10px ;
+}
+
+.botao__funcoes--igual{
+    grid-column: span 2;
+}
+
+@media screen and (min-width: 900px) {
+    .calculadora{
+        height: 630px;
+    }
+    
+}
+
 :root{
     --body__background: var(--tema2__preto);
     --calc__background: var(--tema2__cinza--escuro);
@@ -64,3 +273,4 @@ body{
     color: var(--calc__texto);
     background-color: var(--calc__numbers);
 }
+
