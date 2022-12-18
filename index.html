@@ -5,19 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/index.js"></script>
     
     <title>Calculadora - Alexandre Duarte</title>
 </head>
 <body>
+    <p class="text__tema">clique para trocar os temas <i class="fa-solid fa-arrow-down"></i> </p>
+    
     <div class="calculadora">
-        <header>
+        <header class="cabecalho">
             <h1 class="title">Calculadora</h1>
-            <button class="botao__tema botao__tema--tema1"></button>
-            <button class="botao__tema botao__tema--tema2"></button>
-            <button class="botao__tema botao__tema--tema3"></button>
-            <button class="botao__tema botao__tema--tema4"></button>
+            <div class="temas">
+                <button class="botao__tema botao__tema--tema1"></button>
+                <button class="botao__tema botao__tema--tema2"></button>
+                <button class="botao__tema botao__tema--tema3"></button>
+                <button class="botao__tema botao__tema--tema4"></button>
+            </div>
         </header>
         <main>
             <div class="visor">
@@ -26,29 +31,27 @@
             </div>
 
             <div class="botoes">
-                <div class="numeros">
-                    <button class="botao__numeros">7</button>
-                    <button class="botao__numeros">8</button>    
-                    <button class="botao__numeros">9</button>    
-                    <button class="botao__numeros">4</button>    
-                    <button class="botao__numeros">5</button>    
-                    <button class="botao__numeros">6</button>    
-                    <button class="botao__numeros">1</button>    
-                    <button class="botao__numeros">2</button>    
-                    <button class="botao__numeros">3</button> 
-                    <button class="botao__numeros">.</button> 
-                    <button class="botao__numeros">0</button> 
-                </div>
-                <div class="botao__operacoes">
-                    <button class="botao__funções">CE</button>
-                    <button class="botao__funções">C</button>
-                    <button class="botao__funções">DEL</button>
-                    <button class="botao__funções">/</button>
-                    <button class="botao__funções">*</button>
-                    <button class="botao__funções">-</button>
-                    <button class="botao__funções">+</button>
-                    <button class="botao__funções--igual">=</button>
-                    
+                <button class="botao__funcoes ">CE</button>
+                <button class="botao__funcoes">C</button>
+                <button class="botao__funcoes"><i class="fa-solid fa-delete-left"></i>
+                </button>
+                <button class="botao__funcoes">/</button>
+                <button class="botao__numeros ">7</button>
+                <button class="botao__numeros ">8</button>    
+                <button class="botao__numeros">9</button>   
+                <button class="botao__funcoes">*</button>
+                <button class="botao__numeros">4</button>    
+                <button class="botao__numeros">5</button>    
+                <button class="botao__numeros">6</button>    
+                <button class="botao__funcoes">-</button>
+                <button class="botao__numeros">1</button>    
+                <button class="botao__numeros">2</button>    
+                <button class="botao__numeros">3</button> 
+                <button class="botao__funcoes">+</button>
+                <button class="botao__numeros">.</button> 
+                <button class="botao__numeros">0</button> 
+                <button class="botao__funcoes--igual">=</button>
+                
                 </div>
             </div>
         </main>
