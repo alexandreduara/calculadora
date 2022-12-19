@@ -1,6 +1,5 @@
 
 :root{
-    
     --tema1__cor: #fff;
     --tema1__branco: rgb(255, 255, 255);
     --tema1__cinza-claro: #cbc7c7;
@@ -57,7 +56,7 @@
     --calc__background: var(--tema3__rosa-claro);
     --calc__texto: var(--tema3__roxo);
     --calc__numbers: var(--tema3__rosa-escuro);
-    --calc__funcoes: var(--tema3__rosa-claro);
+    --calc__funcoes: var(--tema3__rosa);
 }
 
 .tema__laranja{
@@ -71,6 +70,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: Helvetica;
 }
 
 body{
@@ -179,11 +179,28 @@ button{
 }
 
 .visor{
+    text-align: right;
     width: 90%;
     height: 15vh;
     background-color: var(--calc__numbers);
     margin: 0px auto;
     border-radius: 13px;
+    box-shadow: -5px -5px 3px var(--calc__funcoes);
+}
+.operacao__anterior, .operacao__atual{
+    overflow-wrap: break-word;
+    padding: 0.2em;
+    min-height: 1.6em;
+}
+
+.operacao__anterior{
+    color: var(--calc__funcoes);
+}
+
+.operacao__atual{
+    font-size: 3em;
+    font-weight: 700;
+
 }
 
 .botoes{
