@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/temas.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
     
     <title>Calculadora - Alexandre Duarte</title>
 </head>
@@ -26,14 +27,14 @@
         </header>
         <main>
             <div class="visor">
-                <div class="operacao__anterior">123+</div>
-                <div class="operacao__atual">456</div>
+                <div class="operacao__anterior"></div>
+                <div class="operacao__atual"></div>
             </div>
 
             <div class="botoes">
                 <button class="botao__funcoes ">CE</button>
                 <button class="botao__funcoes">C</button>
-                <button class="botao__funcoes"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="botao__funcoes botao__deletar" onclick="deletar()"><i class="fa-solid fa-delete-left"></i></button>
                 <button class="botao__funcoes">/</button>
                 <button class="botao__numeros ">7</button>
                 <button class="botao__numeros ">8</button>    

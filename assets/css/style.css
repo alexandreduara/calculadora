@@ -99,7 +99,7 @@ button{
     color: var(--calc__texto);
     background: var(--calc__background);
     width: 370px;
-    height: 600px;
+    height: 640px;
     margin: 0px auto 0px auto;
     border-radius: 20px;
     box-shadow: 3px 3px 3px var(--calc__texto);
@@ -205,12 +205,14 @@ button{
 
 .botoes{
     width: 90%;
-    height: 400px;
     display: grid;
-    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 8px auto;
-    row-gap: 8px;
-    column-gap: 10px ;
+    gap: 6px;
+}
+
+.botoes button{
+    height: 80px;
 }
 
 .botao__funcoes--igual{
