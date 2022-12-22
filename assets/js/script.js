@@ -31,6 +31,18 @@ class Calculadora{
                 this.atualizarTela(valorOperacao, operacao, atual, anterior)
                 break;
             default:
+            case "-":
+                operationValue = previous - current;
+                this.updateScreen(operationValue, operation, current, previous);
+                break;
+            case "*":
+                operationValue = previous * current;
+                this.updateScreen(operationValue, operation, current, previous);
+                break;
+            case "/":
+                operationValue = previous / current;
+                this.updateScreen(operationValue, operation, current, previous);
+                break;
                 return;
 
         }
