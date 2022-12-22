@@ -11,7 +11,7 @@ class Calculadora{
     }
 
     addDigito(digito){
-        if(digito == "." && this.operacaoAtualTexto.innerText.includes(".")){
+        if(digito == "." && this.operacaoAtualTexto.innerText.includes(".") || this.operacaoAtualTexto.innerText.length >= 12){
             return;
         }
 
@@ -19,10 +19,18 @@ class Calculadora{
         this.atualizarTela()
     }
     
+    maxlength = "6"
     processarOperacao(operacao){
+
+        if(this.operacaoAtualTexto.innerText === ""  && operacao !== "C"){
+            if(this.operacaoAnteriorTexto.innerText !== ""){
+                this.mudarOperação(operacao);
+            }
+            return;
+        }
         
         let valorOperacao 
-        const anterior = +this.operacaoAnteriorTexto.innerText;
+        const anterior = +this.operacaoAnteriorTexto.innerText.split(" ")[0];
         const atual = +this.operacaoAtualTexto.innerText;
 
         switch (operacao) {
@@ -32,16 +40,28 @@ class Calculadora{
                 break;
             default:
             case "-":
-                operationValue = previous - current;
-                this.updateScreen(operationValue, operation, current, previous);
+                valorOperacao = anterior - atual;
+                this.atualizarTela(valorOperacao , operacao, atual, anterior);
                 break;
             case "*":
-                operationValue = previous * current;
-                this.updateScreen(operationValue, operation, current, previous);
+                valorOperacao = anterior * atual;
+                this.atualizarTela(valorOperacao, operacao, atual, anterior);
                 break;
             case "/":
-                operationValue = previous / current;
-                this.updateScreen(operationValue, operation, current, previous);
+                valorOperacao  = anterior / atual;
+                this.atualizarTela(valorOperacao, operacao, atual, anterior);
+                break;
+            case "DEL":
+                this.operacaoDeletar();
+                break;
+            case "CE":
+                this.operacaoLimpar();
+                break;
+            case "C":
+                this.operacaoLimparTudo();
+                break;
+            case "=":
+                this.operacaoIgual();
                 break;
                 return;
 
@@ -71,7 +91,41 @@ class Calculadora{
             this.operacaoAtualTexto.innerText = "";
         }
     }
+
+    mudarOperação(operacao){
+        const operacoesMatematicas = ["*", "/", "+", "-"]
+
+        if(!operacoesMatematicas.includes(operacao)){
+            return
+        }
+
+        this.operacaoAnteriorTexto.innerText = this.operacaoAnteriorTexto.innerText.slice(0, -1) + operacao
+    }
+
+    operacaoDeletar(){
+        this.operacaoAtualTexto.innerText = this.operacaoAtualTexto.innerText.slice(0, -1)
+    }
+
+    operacaoLimpar(){
+        this.operacaoAtualTexto.innerText = "";
+    }
+
+    operacaoLimparTudo(){
+        this.operacaoAtualTexto.innerText = "";
+        this.operacaoAnteriorTexto.innerText = "";
+    }
+
+    operacaoIgual(){
+        const operacao = operacaoAnteriorTexto.innerText.split(" ")[1]
+
+        this.processarOperacao(operacao);
+
+        this.operacaoAtualTexto.innerText = this.operacaoAnteriorTexto.innerText.split(" ")[0];
+        this.operacaoAnteriorTexto.innerText = "";
+    }
 }
+
+
 
 const calc = new Calculadora(operacaoAnteriorTexto, operacaoAtualTexto)
 

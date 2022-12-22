@@ -189,18 +189,18 @@ button{
 }
 .operacao__anterior, .operacao__atual{
     overflow-wrap: break-word;
-    padding: 0.2em;
     min-height: 1.6em;
 }
 
 .operacao__anterior{
     color: var(--calc__funcoes);
+    padding: 0.5em;
 }
 
 .operacao__atual{
-    font-size: 3em;
+    font-size: 2.8em;
     font-weight: 700;
-
+    padding: 0.2em;
 }
 
 .botoes{
