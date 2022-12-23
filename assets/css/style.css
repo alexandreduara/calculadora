@@ -181,7 +181,7 @@ button{
 .visor{
     text-align: right;
     width: 90%;
-    height: 15vh;
+    height: 130px;
     background-color: var(--calc__numbers);
     margin: 0px auto;
     border-radius: 13px;
