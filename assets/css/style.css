@@ -19,6 +19,7 @@
     --tema3__rosa-escuro: #fb83f19e;
     --tema3__roxo: rgb(174, 24, 194);
     --tema3__rosa-claro: #fbb5f1;
+    --tema3__rosa-mais-claro: #eaa3e0;
 
     --tema4__cor: rgb(251, 126, 1);
     --tema4__cinza: #817f7f;
@@ -52,7 +53,7 @@
 }
 
 .tema__rosa{
-    --body__background: var(--tema3__rosa);
+    --body__background: var(--tema3__rosa-mais-claro);
     --calc__background: var(--tema3__rosa-claro);
     --calc__texto: var(--tema3__roxo);
     --calc__numbers: var(--tema3__rosa-escuro);
