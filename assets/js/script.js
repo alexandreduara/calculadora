@@ -36,19 +36,23 @@ class Calculadora{
         switch (operacao) {
             case "+":
                 valorOperacao = anterior + atual
+                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao, operacao, atual, anterior)
                 break;
             default:
             case "-":
                 valorOperacao = anterior - atual;
+                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao , operacao, atual, anterior);
                 break;
             case "*":
                 valorOperacao = anterior * atual;
+                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao, operacao, atual, anterior);
                 break;
             case "/":
                 valorOperacao  = anterior / atual;
+                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao, operacao, atual, anterior);
                 break;
             case "DEL":

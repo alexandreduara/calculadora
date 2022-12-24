@@ -99,8 +99,8 @@ button{
 .calculadora{
     color: var(--calc__texto);
     background: var(--calc__background);
-    width: 370px;
-    height: 640px;
+    width: 330px;
+    height: 600px;
     margin: 0px auto 0px auto;
     border-radius: 20px;
     box-shadow: 3px 3px 3px var(--calc__texto);
@@ -213,7 +213,7 @@ button{
 }
 
 .botoes button{
-    height: 80px;
+    height: 75px;
 }
 
 .botao__funcoes--igual{
