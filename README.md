@@ -34,7 +34,7 @@
 
 ## Autor:
 
-| [<img src="https://avatars.githubusercontent.com/u/101659562?s=400&u=d4a3236540693ba18e4ce41f51fdb966c45ac3eb&v=4" width=115><br><sub>Alexandre Duarte de Araújo</sub>](https://github.com/alexandreduara) |
+| [<img src="https://avatars.githubusercontent.com/u/101659562?s=400&u=d4a3236540693ba18e4ce41f51fdb966c45ac3eb&v=4" width=115><br><sub>Alexandre Duarte</sub>](https://github.com/alexandreduara) |
 | :---: |
 
 # Informações de contato :telephone_receiver:
