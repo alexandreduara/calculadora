@@ -19,7 +19,6 @@ class Calculadora{
         this.atualizarTela()
     }
     
-    maxlength = "6"
     processarOperacao(operacao){
 
         if(this.operacaoAtualTexto.innerText === ""  && operacao !== "C"){
@@ -36,23 +35,19 @@ class Calculadora{
         switch (operacao) {
             case "+":
                 valorOperacao = anterior + atual
-                valorOperacao = valorOperacao.toFixed(3);
-                this.atualizarTela(valorOperacao, operacao, atual, anterior)
+                this.atualizarTela(valorOperacao, operacao, atual, anterior);
                 break;
             default:
             case "-":
                 valorOperacao = anterior - atual;
-                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao , operacao, atual, anterior);
                 break;
             case "*":
                 valorOperacao = anterior * atual;
-                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao, operacao, atual, anterior);
                 break;
             case "/":
                 valorOperacao  = anterior / atual;
-                valorOperacao = valorOperacao.toFixed(3);
                 this.atualizarTela(valorOperacao, operacao, atual, anterior);
                 break;
             case "DEL":
@@ -120,7 +115,7 @@ class Calculadora{
     }
 
     operacaoIgual(){
-        const operacao = operacaoAnteriorTexto.innerText.split(" ")[1]
+        let operacao = this.operacaoAnteriorTexto.innerText.split(" ")[1]
 
         this.processarOperacao(operacao);
 
